@@ -1,0 +1,53 @@
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPICADBeta.exe.config
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPICADBeta.exe
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPICADBeta.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPI.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.Form1.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.Properties.Resources.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICAD.csproj.GenerateResource.Cache
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.exe
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\HelixToolkit.Wpf.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICAD.csprojResolveAssemblyReference.cache
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\babaloo.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\lababoo.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\lalaboo.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\balaloo.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\labaloo.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\balaboo.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPI.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\HelixToolkit.Wpf.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\HelixToolkit.Wpf.xml
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\babaloo.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\lababoo.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\lalaboo.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\balaloo.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\labaloo.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\Release\balaboo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPICADBeta.exe.config
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPICADBeta.exe
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPICADBeta.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPI.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\lababoo.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\babaloo.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\balaloo.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\balaboo.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\labaloo.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\lalaboo.dll
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPI.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\PUPI.xml
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\lababoo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\babaloo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\balaloo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\balaboo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\labaloo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\bin\Release\lalaboo.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICAD.csprojResolveAssemblyReference.cache
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.Form1.resources
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.Loading.resources
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.Properties.Resources.resources
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICAD.csproj.GenerateResource.Cache
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.exe
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.pdb
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.setUpLoadDLLs.resources
+C:\Users\Sirona\Documents\projects\PUPI\Source\PUPICADDEMO\PUPIWinFormC\obj\Release\PUPICADBeta.setIgnoreMethod.resources

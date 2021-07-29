@@ -1,0 +1,15 @@
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\PUPPIAsyncTest.exe.config
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\PUPPIAsyncTest.exe
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\PUPPIAsyncTest.pdb
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\PUPPI.dll
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\HelixToolkit.Wpf.dll
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\PUPPI.pdb
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\bin\Release\PUPPI.dll.config
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPPIServerTest.csprojAssemblyReference.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\TestMTPS.Form1.resources
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPIGUITestHarness.Properties.Resources.resources
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPPIServerTest.csproj.GenerateResource.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPPIServerTest.csproj.CoreCompileInputs.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPPIServerTest.csproj.CopyComplete
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPPIAsyncTest.exe
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\PUPPITestClientServer\HelloPUPICS\obj\Release\PUPPIAsyncTest.pdb

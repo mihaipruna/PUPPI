@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<canvas>
+  <node>
+    <guid>3</guid>
+    <displayname>Number input</displayname>
+    <hidden>False</hidden>
+    <xpos>-2</xpos>
+    <baseindex>0</baseindex>
+    <ypos>0</ypos>
+    <nodeBBOX>-2.5,-0.5,0,1,1,0.5</nodeBBOX>
+    <PUPPImodule>PUPPIModel.PUPPIPremadeModules.DataInputModules.PUPPINumber</PUPPImodule>
+    <listlevel>0</listlevel>
+    <parentguid>
+    </parentguid>
+    <output>
+      <outputindex>0</outputindex>
+      <outputvalue>8</outputvalue>
+    </output>
+  </node>
+  <node>
+    <guid>2</guid>
+    <displayname>Add 3 (contnr)</displayname>
+    <hidden>False</hidden>
+    <xpos>0</xpos>
+    <baseindex>0</baseindex>
+    <ypos>0</ypos>
+    <nodeBBOX>-0.5,-0.5,0,1,1,0.5</nodeBBOX>
+    <PUPPImodule>PUPPIModel.PUPPIPremadeModules.PUPPINodeContainer</PUPPImodule>
+    <savedSettings>&lt;programModel&gt;&lt;logicalNode&gt;&lt;guid&gt;0&lt;/guid&gt;&lt;PUPPImodule&gt;PUPPIModel.PUPPIPremadeModules.DataInputModules.PUPPINumber&lt;/PUPPImodule&gt;&lt;cleancap&gt;Number input&lt;/cleancap&gt;&lt;savedSettings&gt;&lt;/savedSettings&gt;&lt;listProcessing&gt;False&lt;/listProcessing&gt;&lt;listElementCount&gt;0&lt;/listElementCount&gt;&lt;output&gt;&lt;outputindex&gt;0&lt;/outputindex&gt;&lt;outputvalue&gt;3&lt;/outputvalue&gt;&lt;/output&gt;&lt;/logicalNode&gt;&lt;logicalNode&gt;&lt;guid&gt;1&lt;/guid&gt;&lt;PUPPImodule&gt;PUPPIModel.PUPPIPremadeModules.MathModules.PUPPIAddition&lt;/PUPPImodule&gt;&lt;cleancap&gt;Addition&lt;/cleancap&gt;&lt;savedSettings&gt;&lt;/savedSettings&gt;&lt;listProcessing&gt;False&lt;/listProcessing&gt;&lt;listElementCount&gt;0&lt;/listElementCount&gt;&lt;connector&gt;&lt;inputindex&gt;1&lt;/inputindex&gt;&lt;moduleguid&gt;0&lt;/moduleguid&gt;&lt;outputindex&gt;0&lt;/outputindex&gt;&lt;/connector&gt;&lt;input&gt;&lt;inputindex&gt;0&lt;/inputindex&gt;&lt;autoListMode&gt;False&lt;/autoListMode&gt;&lt;/input&gt;&lt;input&gt;&lt;inputindex&gt;1&lt;/inputindex&gt;&lt;autoListMode&gt;False&lt;/autoListMode&gt;&lt;/input&gt;&lt;/logicalNode&gt;&lt;/programModel&gt;</savedSettings>
+    <listlevel>0</listlevel>
+    <parentguid>
+    </parentguid>
+    <connector>
+      <inputindex>0</inputindex>
+      <nodeguid>3</nodeguid>
+      <outputindex>0</outputindex>
+    </connector>
+    <input>
+      <inputindex>0</inputindex>
+      <autoListMode>False</autoListMode>
+    </input>
+  </node>
+</canvas>

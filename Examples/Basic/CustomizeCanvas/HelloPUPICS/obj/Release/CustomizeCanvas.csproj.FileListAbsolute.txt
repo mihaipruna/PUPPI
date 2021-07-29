@@ -1,0 +1,15 @@
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\CustomizeCanvas.exe.config
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\CustomizeCanvas.exe
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\CustomizeCanvas.pdb
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\PUPPI.dll
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\HelixToolkit.Wpf.dll
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\PUPPI.pdb
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\bin\Release\PUPPI.dll.config
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.csprojAssemblyReference.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.Form1.resources
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.Properties.Resources.resources
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.csproj.GenerateResource.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.csproj.CoreCompileInputs.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.csproj.CopyComplete
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.exe
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\CustomizeCanvas\HelloPUPICS\obj\Release\CustomizeCanvas.pdb

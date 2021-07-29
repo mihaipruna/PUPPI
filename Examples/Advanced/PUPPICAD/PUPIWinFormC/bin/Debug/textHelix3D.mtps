@@ -1,0 +1,2 @@
+HelixToolkit.Wpf, Version=2013.1.23.1, Culture=neutral, PublicKeyToken=52aa3500039caf0d,C:\Users\Sirona\Documents\projects\PUPI\resources\WPF\NET45\HelixToolkit.Wpf.dll
+HelixToolkit.Wpf*TextCreator*Mthd:CreateTextLabelModel3D__TextCreator__11271(String text,Brush textColor,Boolean isDoubleSided,Double height,Point3D center,Vector3D textDirection,Vector3D updirection,)

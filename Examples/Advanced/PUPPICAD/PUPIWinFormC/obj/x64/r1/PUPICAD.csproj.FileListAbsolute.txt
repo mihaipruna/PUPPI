@@ -1,0 +1,7 @@
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\pupiwpfwindow.baml
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\pupiwpfwindow.g.cs
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\PUPIWinFormC_MarkupCompile.cache
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\PUPIWinFormC.g.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\PUPIWinFormC.Form1.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\PUPIWinFormC.Properties.Resources.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\r1\PUPICAD.csproj.GenerateResource.Cache

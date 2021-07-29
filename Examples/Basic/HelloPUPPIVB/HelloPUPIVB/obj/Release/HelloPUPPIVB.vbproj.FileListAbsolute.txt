@@ -1,0 +1,17 @@
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\HelloPUPPIVB.exe.config
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\HelloPUPPIVB.exe
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\HelloPUPPIVB.pdb
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\HelloPUPPIVB.xml
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\PUPPI.dll
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\HelixToolkit.Wpf.dll
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\PUPPI.pdb
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\bin\Release\PUPPI.dll.config
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.vbprojAssemblyReference.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.Form1.resources
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.Resources.resources
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.vbproj.GenerateResource.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.vbproj.CoreCompileInputs.cache
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.vbproj.CopyComplete
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.exe
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.xml
+D:\projects\puppi\PUPPI Open\Examples\Basic\Samples\HelloPUPPIVB\HelloPUPIVB\obj\Release\HelloPUPPIVB.pdb

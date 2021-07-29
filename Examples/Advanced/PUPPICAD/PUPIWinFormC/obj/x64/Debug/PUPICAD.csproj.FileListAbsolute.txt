@@ -1,0 +1,16 @@
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\pupiwpfwindow.baml
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\pupiwpfwindow.g.cs
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICAD.csproj.GenerateResource.Cache
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\x64\Debug\PUPI.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\x64\Debug\HelixToolkit.Wpf.dll
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\x64\Debug\PUPI.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICAD.csprojResolveAssemblyReference.cache
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\x64\Debug\PUPICADBeta.exe.config
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\x64\Debug\PUPICADBeta.exe
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\bin\x64\Debug\PUPICADBeta.pdb
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICADBeta_MarkupCompile.cache
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICADBeta.g.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICADBeta.Form1.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICADBeta.Properties.Resources.resources
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICADBeta.exe
+C:\Users\Sirona\Documents\Visual Studio 2013\Projects\PUPICADDEMO\PUPIWinFormC\obj\x64\Debug\PUPICADBeta.pdb

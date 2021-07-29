@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DC15D37-F0CB-496F-8A4F-AEFCE0F85943}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PUPPI</RootNamespace>
+    <AssemblyName>PUPPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PUPPI.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r1|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\r1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r1|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\r1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r1|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\r1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HelixToolkit.Wpf, Version=2013.1.23.1, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutlicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutlicense.Designer.cs">
+      <DependentUpon>aboutlicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="debuglog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="debuglog.Designer.cs">
+      <DependentUpon>debuglog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formutils.cs" />
+    <Compile Include="griddataentry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="griddataentry.Designer.cs">
+      <DependentUpon>griddataentry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inputModulePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inputModulePicker.Designer.cs">
+      <DependentUpon>inputModulePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertnote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertnote.Designer.cs">
+      <DependentUpon>insertnote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteropMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteropMatch.Designer.cs">
+      <DependentUpon>InteropMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="licensingPUPI.cs" />
+    <Compile Include="ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MazeSolver.cs" />
+    <Compile Include="nodeinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nodeinfo.Designer.cs">
+      <DependentUpon>nodeinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPI3DModeling.cs" />
+    <Compile Include="PUPPICADServer.cs" />
+    <Compile Include="PUPPICanvas.cs" />
+    <Compile Include="PUPPICanvasControl.xaml.cs">
+      <DependentUpon>PUPPICanvasControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPICanvasServer.cs" />
+    <Compile Include="PUPPIGUIController.cs" />
+    <Compile Include="PUPPIMapViewControl.xaml.cs" />
+    <Compile Include="PUPPIMapViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PUPPIMapViewForm.Designer.cs">
+      <DependentUpon>PUPPIMapViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPIMenu.cs" />
+    <Compile Include="PUPPIMenuControl.xaml.cs">
+      <DependentUpon>PUPPIMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPIModel.cs" />
+    <Compile Include="PUPPIPickTreeInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PUPPIPickTreeInputForm.Designer.cs">
+      <DependentUpon>PUPPIPickTreeInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPIProgramModel.cs" />
+    <Compile Include="PUPPIScriptingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PUPPIScriptingWindow.Designer.cs">
+      <DependentUpon>PUPPIScriptingWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPIStateEngine.cs" />
+    <Compile Include="PUPPItestResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUPPItestResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPITreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PUPPITreeView.Designer.cs">
+      <DependentUpon>PUPPITreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPITreeViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PUPPITreeViewForm.Designer.cs">
+      <DependentUpon>PUPPITreeViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="remoteClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="remoteClient.Designer.cs">
+      <DependentUpon>remoteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setlistlevelform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setlistlevelform.Designer.cs">
+      <DependentUpon>setlistlevelform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setNodeOutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setNodeOutputForm.Designer.cs">
+      <DependentUpon>setNodeOutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showOutputProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showOutputProperties.Designer.cs">
+      <DependentUpon>showOutputProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PUPPIUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="aboutlicense.resx">
+      <DependentUpon>aboutlicense.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="debuglog.resx">
+      <DependentUpon>debuglog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="griddataentry.resx">
+      <DependentUpon>griddataentry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inputModulePicker.resx">
+      <DependentUpon>inputModulePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertnote.resx">
+      <DependentUpon>insertnote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteropMatch.resx">
+      <DependentUpon>InteropMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nodeinfo.resx">
+      <DependentUpon>nodeinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PUPPIMapViewForm.resx">
+      <DependentUpon>PUPPIMapViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PUPPIPickTreeInputForm.resx">
+      <DependentUpon>PUPPIPickTreeInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PUPPIScriptingWindow.resx">
+      <DependentUpon>PUPPIScriptingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PUPPItestResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PUPPItestResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PUPPITreeView.resx">
+      <DependentUpon>PUPPITreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PUPPITreeViewForm.resx">
+      <DependentUpon>PUPPITreeViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="remoteClient.resx">
+      <DependentUpon>remoteClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setlistlevelform.resx">
+      <DependentUpon>setlistlevelform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setNodeOutputForm.resx">
+      <DependentUpon>setNodeOutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showOutputProperties.resx">
+      <DependentUpon>showOutputProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PUPImenuIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PUPPICanvasControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PUPPIMapViewControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PUPPIMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

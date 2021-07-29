@@ -1,0 +1,645 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Reflection;
+using System.Collections; 
+using System.IO;  
+
+namespace PUPPInamespaceexplorer
+{
+    public partial class Form1 : Form
+    {
+        private Assembly myAssembly;
+        private string myAssemblyPath;
+        List<string> typeListFile;
+        List<string> namespaceListFile;
+        List<string> methodListFile;
+        List<string> captionListFile;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (myAssembly != null)
+            {
+                Stream myStream;
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+                saveFileDialog1.Filter = "moduleTypes files (*.mtps)|*.mtps";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if ((myStream = saveFileDialog1.OpenFile()) != null)
+                    {
+                        
+                        myStream.Close();
+                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName  ))
+                        {
+                            //first line is the assembly name
+                            file.WriteLine(myAssembly.GetName()+","+myAssemblyPath ); 
+                            foreach (TreeNode nameSpaceNode in treeView1.Nodes  )
+                            {
+
+                               foreach (TreeNode typeNode in nameSpaceNode.Nodes)
+                               {
+                                   foreach (TreeNode methodNode in typeNode.Nodes)
+                                   {
+                                       if (methodNode.Checked == true)
+                                       {
+                                           file.WriteLine(nameSpaceNode.Text + "*" + typeNode.Text+"*"+methodNode.Text  );
+                                       }
+                                   }
+                               }
+                            }
+                            MessageBox.Show("Saved selected types to " + saveFileDialog1.FileName);  
+                        }
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save File Error!");  
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No assembly loaded!");
+            }
+        }
+
+        private int hac(string s )
+        {
+            int i =0;
+            foreach (char c in s)
+            {
+                i += c;
+            }
+            return i;
+        }
+        
+        private void loadAssemblyAndPopulate(string mypath)
+        {
+            try
+            {
+                myAssembly = Assembly.UnsafeLoadFrom(mypath);
+            }
+            catch(Exception ex)
+            {
+                if (ex.ToString().Contains("attempt was made")) throw ex;
+                if (ex.ToString().Contains("load one or more of")) throw ex;
+                if (ex.ToString().Contains("was expected to contain")) throw ex;
+            }
+            myAssemblyPath = mypath;
+            assemblyPath.Text = mypath;
+            //clear the tree and load namespaces etc
+            treeView1.Nodes.Clear();
+            //goes through namespaces and types
+            List<string> namespaceNames = new List<string>();
+            List<ArrayList> namespaceTypes = new List<ArrayList>();
+            foreach (var type in myAssembly.GetTypes())
+            {
+                Type t = type as Type;
+                if (t.IsAbstract && !t.IsSealed) continue;
+                if (t.Name.StartsWith("<>")) continue;
+                string ns = type.Namespace;
+                if (!namespaceNames.Contains(ns))
+                {
+                    namespaceNames.Add(ns);
+                    namespaceTypes.Add(new ArrayList());
+                    namespaceTypes[namespaceTypes.Count - 1].Add(type);
+                }
+                else
+                {
+                    int ii = namespaceNames.IndexOf(ns);
+                    namespaceTypes[ii].Add(type);
+                }
+            }
+            //populate tree
+            foreach (string ns in namespaceNames)
+            {
+                int ii = namespaceNames.IndexOf(ns);
+                TreeNode tN = treeView1.Nodes.Add(ns);
+                ArrayList myTypes = namespaceTypes[ii];
+
+                foreach (Type t in myTypes)
+                {
+                    //don't use autogenerated classes
+                    if (t.Name.StartsWith("<>")) continue;
+                    if (t.IsAbstract && !t.IsSealed) continue;
+                    TreeNode tttN = tN.Nodes.Add(t.Name);
+                    //int pcnt = 0;
+                    //foreach (PropertyInfo prinfo in t.GetProperties() )
+                    //{
+                    //    if (prinfo.GetGetMethod()!=null )
+                    //    {
+                    //        string parlist="(";
+                    //        MethodInfo ginfo=prinfo.GetGetMethod();
+                    //            ParameterInfo[] Myarray = ginfo.GetParameters();
+                    //    foreach (ParameterInfo pinfo in Myarray)
+                    //    {
+
+                    //        if (pinfo.IsOut == true)
+                    //        {
+                    //            parlist += "out " + pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                    //        }
+                    //        else
+                    //        {
+                    //            parlist += pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                    //        }
+                    //    }
+                    //    parlist += ")";
+                    //    TreeNode gtttn= tttN.Nodes.Add( "Get:" + ginfo.Name + "__"+t.Name + "__" + pcnt.ToString() + parlist ); 
+                    //    gtttn.ForeColor = Color.Green ;
+
+                    //    }
+                    //    if (prinfo.GetSetMethod() != null)
+                    //    {
+                    //        string parlist = "(";
+                    //        MethodInfo sinfo = prinfo.GetSetMethod();
+                    //        ParameterInfo[] Myarray = sinfo.GetParameters();
+                    //        foreach (ParameterInfo pinfo in Myarray)
+                    //        {
+
+                    //            if (pinfo.IsOut == true)
+                    //            {
+                    //                parlist += "out " + pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                    //            }
+                    //            else
+                    //            {
+                    //                parlist += pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                    //            }
+                    //        }
+                    //        parlist += ")";
+                    //        TreeNode stttn = tttN.Nodes.Add("Set:" + sinfo.Name + "__" + t.Name + "__" + pcnt.ToString() + parlist );
+                    //        stttn.ForeColor = Color.Green;
+
+                    //    }
+
+                    //    pcnt++;
+                    //}
+
+
+                    //constructors
+                    int ccnt = 0;
+                    var bci = t.GetConstructors();//.OrderBy(aci => aci.Name).ThenBy(aci => String.Join(",", aci.GetParameters().Select(x => x.Name + x.ParameterType.Name).ToArray()).Length);   
+
+                    foreach (ConstructorInfo cinfo in bci)
+                    {
+                        
+                        string parlist = "(";
+                        ParameterInfo[] Myarray = cinfo.GetParameters();
+                        string hame = "c";
+                        foreach (ParameterInfo pinfo in Myarray)
+                        {
+                            hame += pinfo.Name;
+                            hame += pinfo.ParameterType.Name;  
+                            if (pinfo.IsOut == true)
+                            {
+                                parlist += "out " + pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                            }
+                            else
+                            {
+                                parlist += pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                            }
+                        }
+                        parlist += ")";
+                        //TreeNode ctttn = tttN.Nodes.Add("New " + t.Name + "__" + ccnt.ToString() + "_" + Myarray.Count().ToString() + parlist);
+
+                        TreeNode ctttn = tttN.Nodes.Add("New " + t.Name + "__" + hac(hame).ToString() + "_" + Myarray.Count().ToString() + parlist);
+
+                        ctttn.ForeColor = Color.Blue;
+                        ccnt++;
+                    }
+
+                    MethodInfo[] smi = t.GetMethods();
+                    if (smi.GetLength(0) > 0)
+                    {
+                        var bmi = smi;//.OrderBy(ami => ami.Name).ThenBy(ami => ami.ReturnType.Name).ThenBy(ami => String.Join(",", ami.GetParameters().Select(x => x.Name + x.ParameterType.Name).ToArray()).Length);
+                        if (bmi != null)
+                        {
+                            int mcnt = 0;
+                            foreach (MethodInfo methinfo in bmi)
+                            {
+                                string hame = "m";
+                                string parlist = "(";
+                                ParameterInfo[] Myarray = methinfo.GetParameters();
+                                foreach (ParameterInfo pinfo in Myarray)
+                                {
+                                    hame += pinfo.Name;
+                                    hame += pinfo.ParameterType.Name;  
+                                    if (pinfo.IsOut == true)
+                                    {
+                                        parlist += "out " + pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                                    }
+                                    else
+                                    {
+
+                                        parlist += pinfo.ParameterType.Name + " " + pinfo.Name + ",";
+                                    }
+                                }
+                               // TreeNode mtttn = tttN.Nodes.Add("Mthd:" + methinfo.Name + "__" + t.Name + "__" + mcnt.ToString() + parlist + ")");
+
+                                TreeNode mtttn = tttN.Nodes.Add("Mthd:" + methinfo.Name + "__" + t.Name + "__" + hac(hame).ToString() + parlist + ")");
+                               
+                                
+                                mtttn.ToolTipText = "Double click to change PUPPI Module name for this method. Must be unique.";
+                                mtttn.ForeColor = Color.Black;
+                                mcnt++;
+
+
+                            }
+                        }
+
+
+                    }
+                }
+            }
+            treeView1.Sort();  
+        }
+        private void browsefile_Click(object sender, EventArgs e)
+        {
+            
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "DLL files (*.dll)|*.dll|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    this.Text = "Loading Assembly, Please Wait..."; 
+                    treeView1.Nodes.Clear();
+                    loadAssemblyAndPopulate(openFileDialog1.FileName);
+                    this.Text = "PUPPI Namespace Explorer"; 
+   
+                }
+                catch (Exception ex)
+                {
+                    try
+                    {
+                        if (File.Exists("loaderErrors.txt")) File.Delete("loaderErrors.txt"); 
+                    }
+                    catch
+                    {
+
+                    }
+                    if (ex.ToString().Contains("attempt was made"))
+                    {
+                        MessageBox.Show("Error: Could not read assembly file from disk. Original error: " + ex.Message+"\n\n You can allow the assembly to load by right clicking on the file in Windows Explorer, picking properties, then click Unblock, at your own risk");
+                        myAssembly = null;
+                    }
+                    else if  (ex.ToString().Contains("load one or more of")) 
+                    {
+                        string extraErrors = "";
+                        try
+                        {
+                            ReflectionTypeLoadException re = ex as ReflectionTypeLoadException;
+                            foreach (Exception eee in re.LoaderExceptions)
+                            {
+                                extraErrors += "\n" + eee.ToString();  
+                            }
+                            System.IO.File.WriteAllText("loaderErrors.txt", extraErrors);
+                        }
+                        catch
+                        {
+
+                        }
+                        ////try to load other DLL files
+                        //string pp = Path.GetDirectoryName(openFileDialog1.FileName);
+                        
+                        //string[] files = System.IO.Directory.GetFiles(Path.GetFullPath(pp).Replace(@"\\", @"\"), "*.dll");
+                        ////all and all
+                        //foreach (string fs in files)
+                        //{
+                        //    foreach (string gs in files)
+                        //    {
+                        //        if (gs!=fs)
+                        //        {
+                        //            try
+                        //            {
+                        //                Assembly.Load(gs);  
+                        //            }
+                        //            catch
+                        //            {
+
+                        //            }
+                                    
+                        //        }
+                        //        try
+                        //        {
+                        //            Assembly.Load(fs);
+                        //        }
+                        //        catch
+                        //        {
+
+                        //        }
+                        //    }
+                        //}
+                        //try
+                        //{
+                        //    this.Text = "Loading Assembly, Please Wait...";
+                        //    treeView1.Nodes.Clear();
+                        //    loadAssemblyAndPopulate(openFileDialog1.FileName);
+                        //    this.Text = "PUPPI Namespace Explorer"; 
+                        //}
+                        //catch
+                        //{
+                            MessageBox.Show("Error: Could not read assembly file from disk. Original error: " + ex.Message + "\n\n Try to load referenced assemblies in the PUPPI Namespace Explorer before loading the desired assembly");
+                            try
+                            {
+                                if (File.Exists("loaderErrors.txt"))
+                                System.Diagnostics.Process.Start("notepad.exe", "loaderErrors.txt");
+                            }
+                            catch
+                            {
+
+                            }
+                            assemblyPath.Text = "Failed to load assembly";
+                        myAssembly = null;
+
+                        //}
+                                           
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Could not read assembly file from disk. Original error: " + ex.Message);
+                        assemblyPath.Text = "Failed to load assembly";
+                        myAssembly = null;
+                    }
+                    
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            treeView1.ShowNodeToolTips = true;  
+        }
+
+        private void assemblyL_Click(object sender, EventArgs e)
+        {
+
+        }
+        //if user checks unchecks namespaces, children need to be updated as well
+       
+        //selects / deselects children
+        private void CheckAllChildNodes(TreeNode treeNode, bool nodeChecked)
+        {
+            foreach (TreeNode node in treeNode.Nodes)
+            {
+                node.Checked = nodeChecked;
+                if (node.Nodes.Count > 0)
+                {
+                    // If the current node has child nodes, call the CheckAllChildsNodes method recursively. 
+                    this.CheckAllChildNodes(node, nodeChecked);
+                }
+            }
+        }
+
+        // in case we unchecked everything need to uncheck above
+        private void unCheckParentNoder(TreeNode treeNode)
+        {
+            TreeNode parent=treeNode.Parent;
+            if (parent != null)
+            {
+                bool che=false;
+                foreach (TreeNode n in parent.Nodes)
+                {
+                    if (n.Checked)
+                    {
+                        che = true;
+                        break;
+                    }
+                }
+                if (!che)
+                {
+                    parent.Checked = false;
+                    this.unCheckParentNoder(parent);
+                }
+            }
+        }
+
+        //if user checks unchecks namespaces, children need to be updated as well
+        private void treeView1_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            // The code only executes if the user caused the checked state to change. 
+            if (e.Action != TreeViewAction.Unknown)
+            {
+                if (e.Node.Nodes.Count > 0)
+                {
+                    /* Calls the CheckAllChildNodes method, passing in the current 
+                    Checked value of the TreeNode whose checked state changed. */
+                    this.CheckAllChildNodes(e.Node, e.Node.Checked);
+                }
+            }
+            if (e.Action != TreeViewAction.Unknown)
+            {
+                this.unCheckParentNoder(e.Node);
+            }
+            
+        }
+
+        private void quitbutton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);  
+        }
+
+        private void loadmtps_Click(object sender, EventArgs e)
+        {
+             OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "moduleTypes files (*.mtps)|*.mtps";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+
+                    this.Text = "Loading MTPS file, please wait..."; 
+                    List<ArrayList> namespacemodules = new List<ArrayList>();
+                    
+                    //read all types and associated namespaces from file
+                    typeListFile = new List<string>();
+                   namespaceListFile = new List<string>();
+                   methodListFile = new List<string>();
+                   captionListFile = new List<string>(); 
+                    int counter = 0;
+                    string line;
+                    System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog1.FileName );
+                    string assemblyName = "";
+
+                    char[] commaDelimiterChars = { ',' };
+                    char[] spaceDelimiterChars = { '*' };
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        if (counter == 0)
+                        {
+                            //get assembly name
+
+                            string[] words = line.Split(commaDelimiterChars);
+                            assemblyName = words[0];
+                            myAssemblyPath = words[words.Length  - 1];  
+
+                        }
+                        else
+                        {
+                            string[] words = line.Split(spaceDelimiterChars);
+                            namespaceListFile.Add(words[0]);
+                            typeListFile.Add(words[1]);
+                            string[] sep={" Caption "};
+                            string[] mname = words[2].Split(sep,StringSplitOptions.RemoveEmptyEntries  );  
+                            if (mname.Length==1  )
+                            {
+                                methodListFile.Add(words[2]);
+                                captionListFile.Add(" ");
+                            }
+                            else
+                            {
+                                methodListFile.Add(mname[0] );
+                                captionListFile.Add(mname[1] );
+                            }
+                        }
+                        counter++;
+                    }
+
+                    file.Close();
+                    treeView1.Nodes.Clear();
+                    loadAssemblyAndPopulate(myAssemblyPath);
+                    checkSelectedMethods();
+                 
+                    this.Text = "PUPPI Namespace Explorer"; 
+                }
+                catch(Exception exy)
+                {
+                    string[] atsep={"at"};
+                    MessageBox.Show("Error loading module types file: " + exy.ToString());//.Split(atsep,StringSplitOptions.None   )[0]);  
+                }
+               }
+        }
+        private void checkSelectedTypes()
+        {
+            foreach (TreeNode tn in treeView1.Nodes  )
+            {
+
+                if (namespaceListFile.Contains(tn.Text ))
+                {
+
+                    foreach (TreeNode ttn in tn.Nodes )
+                    {
+                        foreach (string typeName in typeListFile )
+                        {
+                            if (ttn.Text==typeName && namespaceListFile[typeListFile.IndexOf(typeName)]==tn.Text)
+                            {
+                                ttn.Checked = true;
+                                tn.Expand(); 
+                                break;
+                               
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        private void checkSelectedMethods()
+        {
+            foreach (TreeNode tn in treeView1.Nodes)
+            {
+
+                if (namespaceListFile.Contains(tn.Text))
+                {
+
+                    foreach (TreeNode ttn in tn.Nodes)
+                    {
+                        if (typeListFile.Contains(ttn.Text))
+                        {
+                            foreach (TreeNode ttm in ttn.Nodes)
+                            {
+                                if (methodListFile.Contains(ttm.Text))
+                                {
+                                    foreach (string methodName in methodListFile)
+                                    {
+                                        //check matching method
+                                        if (ttm.Text == methodName && namespaceListFile[methodListFile.IndexOf(methodName)] == tn.Text && typeListFile[methodListFile.IndexOf(methodName)] == ttn.Text)
+                                        {
+                                            if (captionListFile[methodListFile.IndexOf(methodName )  ]!=" " && captionListFile[methodListFile.IndexOf(methodName )  ]!="" )
+                                            {
+                                                ttm.Text = ttm.Text + " Caption " + captionListFile[methodListFile.IndexOf(methodName)];
+                                            }
+                                            ttm.Checked = true;
+                                            tn.Expand();
+                                            ttn.Expand(); 
+                                            break;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string capt = e.Node.Text;
+            if (capt.Length>5 &&  capt.Substring(0,5)=="Mthd:" )
+            {
+                string input = Microsoft.VisualBasic.Interaction.InputBox("Enter new caption", "Enter a string", "", -1, -1);
+                string[] sep = { " Caption " };
+                string[] words = capt.Split(sep, StringSplitOptions.RemoveEmptyEntries); 
+                if (input!="" && input.Replace(" ","")!="" )
+                {
+                    e.Node.Text = words[0] + " Caption " + input;  
+                }
+                else
+                {
+                    e.Node.Text = words[0];
+                } 
+            }
+           
+        }
+
+        private void findMethod_Click(object sender, EventArgs e)
+        {
+            string toFind = findTextbox.Text;
+            if (toFind!="" )
+            {
+                foreach (TreeNode nameSpaceNode in treeView1.Nodes)
+                {
+
+                    foreach (TreeNode typeNode in nameSpaceNode.Nodes)
+                    {
+                        foreach (TreeNode methodNode in typeNode.Nodes)
+                        {
+                            if (methodNode.Text.Contains(toFind) )
+                            {
+                                nameSpaceNode.Expand();  
+                                typeNode.Expand();  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
